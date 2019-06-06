@@ -1,7 +1,7 @@
 "use-strict"
-const express = require("express");
-const app = express();
-const routes = require("./route");
+const express = require("express"); //need to require express, so create a variable
+const app = express(); 
+const routes = require("./route"); 
 
 app.use(express.static(__dirname + "/public"));
 app.use(express.json());

@@ -1,8 +1,65 @@
-div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-style: solid;
-    background-color: aqua;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(173, 157, 111);
+    align-content: center;
+    justify-content: center;
 }
 
+h1{
+    width: 310px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 25px;
+    font-style: italic;
+    border-style: solid;
+    border-radius: 50px;
+    padding: 20px;
+    flex-direction: column;
+    background-color: gold;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+#carsForm, #updateForm, div{
+    display: flex;
+    width:350px;
+    height:fit-content;
+    margin:50px;
+    padding:50px;
+    color: silver;
+    border:2px black;
+    border-style: solid;
+    border-radius:40px 0 40px 0;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    /* display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 12px;
+    border-style: solid;
+    border-radius: 50px;
+    padding: 20px;
+    flex-direction: column;
+    background-color: silver; */
+}
+button{
+    color: grey;
+    border-radius:5px;
+    border:none;
+    padding:10px;
+    text-shadow:1px 1px 1px #949494;
+    margin-left:120px;
+    cursor: pointer;
+}
+input {
+    margin-bottom: 10px;
+}
+label {
+    font-size:15px;
+    font-weight:700
+}

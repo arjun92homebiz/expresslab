@@ -1,6 +1,44 @@
-<div *ngFor="let item of cart">
-<p>id: {{item.id }}</p>
-<p>product: {{item.product }}</p>
-<p>price: {{item.price }}</p>
-<p>quantity: {{item.quantity }}</p>
+<h1>List of High End Car</h1>
+
+<form #carsForm="ngForm" (ngSubmit)="addNewItem(carsForm)">
+    <!-- <label for="">ID</label>
+    <input type="number" ngModel name="id"> -->
+
+    <label for="">Product</label>
+    <input type="text" ngModel name="product">
+
+    <label for="">Price</label>
+    <input type="number" ngModel name="price">
+
+    <label for="">Quantity</label>
+    <input type="number" ngModel name="quantity">
+
+    <button> Add Car </button>
+</form>
+
+<div *ngFor="let item of cart; index as i">
+    <!-- <p> ID: {{ item.id }} </p> -->
+    <p> Product: {{ item.product }} </p>
+    <p> Price: {{ item.price }} </p>
+    <p> Quantity: {{ item.quantity }} </p>
+    <button (click)="deleteItem(item.id)">Delete</button>
+    <button (click)="toggleForm(i)">Edit</button>
+
+<form *ngIf="item.beingupdated" #updateForm="ngForm"
+(ngSubmit)="[updateItem(item), toggleForm(i)]">
+    <!-- <form #updateForm="ngForm" (ngSubmit)="updateAnAnimal(animal)"> -->
+        <!-- <label for="">ID</label>
+        <input type="number" [(ngModel)]="item.id" name="id">  -->
+
+        <label for="">Product</label>
+        <input type="text" [(ngModel)]="item.name" name="product"> 
+
+        <label for="">Price</label>
+        <input type="number" [(ngModel)]="item.price" name="type"> 
+
+        <label for="">Quantity</label>
+        <input type="Quantity" [(ngModel)]="item.quantity" name="quantity"> 
+
+        <button>Save Item</button>
+    </form>   
 </div>
